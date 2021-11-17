@@ -7,10 +7,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     if request:
         try:
-            url = "mongodb://neighbydbacc:te43uFmvKwL4BHKazCjNckzUsBs48b0ZnCpUTbrD2d4cCBLRbbdMglU6oRhg48l3RTgXptjWGIySaph7BPnX0A==@neighbydbacc.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@neighbydbacc@"  # TODO: Update with appropriate MongoDB connection information
+            url = "mongodb://neighbycmsdbacc:xMb1Y4OTtGO6qYKsKFrjoySFEXKGpc1tRk4M2PVHS9PWEDD9xgXoMsD1IN3aetNcNPkLFpunlLhgSZCWvPwXDQ==@neighbycmsdbacc.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@neighbycmsdbacc@"  # TODO: Update with appropriate MongoDB connection information
             client = pymongo.MongoClient(url)
-            database = client['neighbymgdb']
-            collection = database['advertisements1']
+            database = client['neighbycmsmgdb']
+            collection = database['advertisements']
 
             rec_id1 = collection.insert_one(eval(request))
 
